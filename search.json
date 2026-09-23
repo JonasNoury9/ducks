@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "seasons.html",
+    "href": "seasons.html",
+    "title": "Seasons",
+    "section": "",
+    "text": "# A tibble: 12 × 2\n   month         n\n   &lt;ord&gt;     &lt;int&gt;\n 1 September 20977\n 2 October    9890\n 3 August     9659\n 4 March      7524\n 5 April      6369\n 6 July       5748\n 7 February   4960\n 8 November   4825\n 9 December   3796\n10 May        3423\n11 January    3266\n12 June       2842"
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Analysis",
+    "section": "",
+    "text": "Mallard ducks are a familiar and widespread species of dabbling duck, recognized by the male’s iridescent green head and the female’s mottled brown plumage. They are highly adaptable birds that thrive in wetlands, lakes, and agricultural landscapes, where they feed on plants, seeds, and small aquatic invertebrates.\nLake Constance is a large freshwater lake in central Europe, shared by Germany, Switzerland, and Austria. It is a productive and biologically rich region, making it an important stopover and breeding area for migratory waterfowl such as mallards.\nThe GPS tracking data used here records the movement of individual ducks across time and space, revealing patterns in habitat use, migration timing, and seasonal behavior. By following these positions, we can see how mallards move through the landscape and how their activity changes across the year.\n\n\n\n\n\n# A tibble: 52 × 2\n   duck_id                        n\n   &lt;chr&gt;                      &lt;int&gt;\n 1 2351 - Radolfzell JC 72052 20169\n 2 1806 - Radolfzell JC70792  10139\n 3 2318 - Radolfzell JC 72053  9522\n 4 2312 - Radolfzell JC 72051  7163\n 5 2497 - Radolfzell JC74415   4835\n 6 2339 - Radolfzell JC 72018  4645\n 7 2495 - Radolfzell JC74406   3030\n 8 2501 - Radolfzell JC74418   2861\n 9 2502 - Radolfzell JC74417   2715\n10 2489 - Radolfzell JC74412   2514\n# ℹ 42 more rows\n\n\n\n\n# A tibble: 1 × 4\n  min_lat max_lat min_long max_long\n    &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1    47.3    53.9     7.83     23.6\n\n\n\n\n# A tibble: 83,279 × 11\n   timestamp             lat  long speed heading duck_id   taxon month month_num\n   &lt;dttm&gt;              &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;ord&gt;     &lt;dbl&gt;\n 1 2007-11-23 23:00:00  47.7  9.00    NA      NA Argos 77… Anas… Nove…        11\n 2 2007-11-24 05:00:00  47.7  9.00    NA      NA Argos 77… Anas… Nove…        11\n 3 2007-11-26 05:00:00  47.7  9.00    NA      NA Argos 77… Anas… Nove…        11\n 4 2007-11-26 23:00:00  47.7  9.00    NA      NA Argos 77… Anas… Nove…        11\n 5 2007-11-27 05:00:00  47.7  9.00    NA      NA Argos 77… Anas… Nove…        11\n 6 2007-11-27 23:00:00  47.7  9.00    NA      NA Argos 77… Anas… Nove…        11\n 7 2007-11-23 09:00:00  47.7  9.00    NA      NA Argos 77… Anas… Nove…        11\n 8 2007-11-24 09:00:00  47.7  9.00    NA      NA Argos 77… Anas… Nove…        11\n 9 2007-11-24 17:00:00  47.7  9.00    NA      NA Argos 77… Anas… Nove…        11\n10 2007-11-25 05:00:00  47.7  9.00    NA      NA Argos 77… Anas… Nove…        11\n# ℹ 83,269 more rows\n# ℹ 2 more variables: year &lt;dbl&gt;, season &lt;ord&gt;"
+  }
+]
