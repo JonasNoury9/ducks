@@ -1,0 +1,40 @@
+---
+title: "Seasons"
+execute:
+  echo: false
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+library(sf)
+```
+
+```{r}
+#| cache: true
+#| message: false
+mallards <- readRDS("data/mallards.rds")
+```
+
+```{r}
+#| message: false
+mallards |>
+  count(month, sort = TRUE)
+```
+
+```{r}
+#| message: false
+library(ggridges)
+
+mallards |>
+  filter(speed <= 30) |>
+  ggplot(aes(x = speed, y = month, fill = month)) +
+  geom_density_ridges(alpha = 0.7, scale = 1.2) +
+  labs(
+    x = "Speed",
+    y = "Month",
+    title = "Distribution of mallard speeds by month",
+    fill = "Month"
+  ) +
+  theme_minimal()
+```
