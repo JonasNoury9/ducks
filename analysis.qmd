@@ -1,0 +1,54 @@
+---
+title: "Analysis"
+execute:
+  echo: false
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+library(sf)
+```
+
+```{r}
+#| message: false
+#| cache: true
+mallards <- readRDS("data/mallards.rds")
+```
+
+```{r}
+#| message: false
+mallards |>
+  count(duck_id, sort = TRUE)
+```
+
+```{r}
+#| message: false
+mallards |>
+  summarise(
+    min_lat = min(lat, na.rm = TRUE),
+    max_lat = max(lat, na.rm = TRUE),
+    min_long = min(long, na.rm = TRUE),
+    max_long = max(long, na.rm = TRUE)
+  )
+```
+
+```{r}
+#| message: false
+mallards <- read_csv("data/mallards.csv") |>
+  mutate(
+    timestamp = as.POSIXct(timestamp, tz = "UTC"),
+    month = month(timestamp, label = TRUE, abbr = FALSE),
+    month_num = month(timestamp),
+    year = year(timestamp),
+    season = case_when(
+      month_num %in% 3:5 ~ "Spring",
+      month_num %in% 6:8 ~ "Summer",
+      month_num %in% 9:11 ~ "Autumn",
+      TRUE ~ "Winter"
+    ),
+    season = factor(season, levels = c("Spring", "Summer", "Autumn", "Winter"), ordered = TRUE)
+  )
+
+mallards
+```
